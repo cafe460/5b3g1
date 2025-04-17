@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* 設定黑色背景 */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* 讓文字變成白色，確保可讀性 */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* 讓背景有點透明，不影響黑色主題 */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    color: #ff4081; /* 粉紅色標題，與櫻花呼應 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #ff4081; /* 粉色按鈕 */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #f50057;
+}
+
+/* 櫻花樣式 */
+.sakura {
+    position: fixed;
+    top: -10px; /* 初始位置在視窗上方 */
+    color: pink; /* 櫻花顏色 */
+    opacity: 0.8;
+}
+
+/* 櫻花飄落動畫 */
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg); /* 向下掉落並旋轉 */
+    }
+}
+
+/* 導覽列樣式 */
+.navbar {
+    background-color: #111; /* 更深的黑色，與背景區分 */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #ff4081; /* 粉紅色文字，呼應櫻花主題 */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 80px 20px;
+}

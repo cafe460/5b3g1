@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羅一程</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入樣式表 -->
+</head>
+<body>
+    <div class="container">
+        <h1>羅一程</h1>
+        <p>請選擇以下連結以訪問其他頁面：</p>
+        <ul>
+            <li><a href="work1.html" target="_blank" class="button">work1</a></li>
+            <li><a href="wrok2.html" target="_blank" class="button">work2</a></li>
+            <li><a href="work3.html" target="_blank" class="button">work3</a></li>
+            <li><a href="work4.html" target="_blank" class="button">work4</a></li>
+        </ul>
+    </div>
+   <script>
+    // 櫻花生成函數
+    function createSakura() {
+        const sakura = document.createElement('div');
+        sakura.className = 'sakura';
+        sakura.innerHTML = ' 🌸 '; // 櫻花符號
+        sakura.style.left = Math.random() * 100 + 'vw'; // 隨機水平位置
+        sakura.style.fontSize = Math.random() * 1.5 + 0.5 + 'em'; // 隨機大小
+        sakura.style.opacity = Math.random() * 0.5 + 0.5; // 隨機透明度
+    
+        // 設置隨機下落時間
+        const fallDuration = Math.random() * 5 + 3; // 3 到 8 秒之間
+        sakura.style.animation = `fall ${fallDuration}s linear infinite, sway 3s infinite ease-in-out`;
+    
+        document.body.appendChild(sakura);
+    
+        // 移除櫻花
+        sakura.addEventListener('animationend', () => {
+            sakura.remove();
+        });
+    }
+    
+    // 每隔一段時間生成櫻花
+    setInterval(createSakura, 500); // 每 300 毫秒生成一片櫻花
+   
+ </script>
+    
+</body>
+</html>
+   
